@@ -1,7 +1,7 @@
 #!/bin/sh
 
-sudo echo "
+echo "
 mount {
 	cpuacct = /mnt/cgroups/cpuacct;
 }
-" >> /etc/cgconfig.conf
+" | sudo tee -a /etc/cgconfig.conf > /dev/null
